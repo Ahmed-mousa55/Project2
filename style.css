@@ -1,0 +1,36 @@
+.moon{
+    width: 200px;
+    height: 200px;
+    background: #F6c;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+     top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+}
+.moon::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background: #F50;
+    animation: orbit 3s linear infinite;
+    transform-origin: center center -130px;
+
+}
+@keyframes orbit {
+        from{
+            transform: rotateX(-300deg) rotateY(360deg);
+        }
+        to{
+            transform: rotateX(-300deg) rotateY(-360deg);
+        }
+}
